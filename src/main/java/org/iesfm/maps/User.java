@@ -4,14 +4,10 @@ import java.util.Objects;
 
 public class User {
     private String nif;
-    private String name;
-    private String surname;
     private int tlf;
 
-    public User(String nif, String name, String surname, int tlf) {
+    public User(String nif, int tlf) {
         this.nif = nif;
-        this.name = name;
-        this.surname = surname;
         this.tlf = tlf;
     }
 
@@ -21,22 +17,6 @@ public class User {
 
     public void setNif(String nif) {
         this.nif = nif;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public int getTlf() {
@@ -52,20 +32,18 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return tlf == user.tlf && Objects.equals(nif, user.nif) && Objects.equals(name, user.name) && Objects.equals(surname, user.surname);
+        return tlf == user.tlf && Objects.equals(nif, user.nif);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nif, name, surname, tlf);
+        return Objects.hash(nif, tlf);
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "nif='" + nif + '\'' +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
                 ", tlf=" + tlf +
                 '}';
     }
