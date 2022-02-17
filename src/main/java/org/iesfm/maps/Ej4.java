@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Ej4 {
 
-    private void removeTlf(Map<String, User> usersByNif, String nif) throws NifNotFoundException {
+    public static void removeTlf(Map<String, User> usersByNif, String nif) throws NifNotFoundException {
         if (!usersByNif.containsKey(nif)) {
             throw new NifNotFoundException();
         } else {

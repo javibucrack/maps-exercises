@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Ej2 {
 
-    private int tlfByNif(Map<String, User> usersByNif, String nif) throws NifNotFoundException {
+    public static int getPhonesByNif(Map<String, User> usersByNif, String nif) throws NifNotFoundException {
         if (!usersByNif.containsKey(nif)) {
             throw new NifNotFoundException();
         }

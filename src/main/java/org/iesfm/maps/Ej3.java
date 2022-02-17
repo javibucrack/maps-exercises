@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Ej3 {
-    private List<Integer> tlfByNif(Map<String, User> usersByNif) {
+    public static List<Integer> tlfByNif(Map<String, User> usersByNif) {
         List<Integer> tlfList = new LinkedList<>();
         for (User user : usersByNif.values()) {
             tlfList.add(user.getTlf());
